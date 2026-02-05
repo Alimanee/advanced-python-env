@@ -1,8 +1,8 @@
 from django.urls import path
-from . import views  # Точка означает "из этой же папки"
-
+from . import views 
 urlpatterns = [
     path('', views.home, name='home'),
+
     path('about/', views.about, name='about'),
 ]
 
@@ -12,8 +12,7 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('about/', views.about, name='about'),
-    path('api/', views.api_test), # Добавь вот это
+    path('api/', views.api_test), 
 ]
 
-# Добавь это в список urlpatterns
 path('api/', views.project_api),
