@@ -1,8 +1,6 @@
 from django.shortcuts import render
 
-# Логика главной страницы
 def home(request):
-    # Эти данные Django прогонит через цикл {% for %} в home.html
     context = {
         'title': 'Главная',
         'features': [
@@ -14,11 +12,11 @@ def home(request):
     }
     return render(request, 'main/home.html', context)
 
-# Логика страницы "О нас"
+
 def about(request):
     return render(request, 'main/about.html')
 
-# Логика для страницы товаров (Пункт №1: циклы/условия)
+
 def items_list(request):
     items = [
         {'name': 'Ноутбук', 'price': 50000, 'stock': True},
