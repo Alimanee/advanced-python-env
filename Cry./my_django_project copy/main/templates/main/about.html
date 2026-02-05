@@ -1,0 +1,14 @@
+{% extends 'main/base.html' %}
+
+{% block title %}О нас{% endblock %}
+
+{% block content %}
+    <h2>О проекте</h2>
+    <p>Данный проект выполнен на Django с использованием DTL (Django Template Language).</p>
+    
+    {% if user.is_authenticated %}
+        <p>Привет, {{ user.username }}! Ты авторизован.</p>
+    {% else %}
+        <p>Вы зашли как гость. Пожалуйста, войдите в систему.</p>
+    {% endif %}
+{% endblock %}
